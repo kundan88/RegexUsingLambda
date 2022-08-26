@@ -39,7 +39,13 @@
             Console.WriteLine("Enter Password");
             string Password_2 = Console.ReadLine();
             userRegistration.validPasswordR3(Password_2);
+
+            //UC8
+            Console.WriteLine("Enter Password");
+            string Password_4 = Console.ReadLine();
+            userRegistration.validPasswordR3(Password_4);
         }
+
 
     }
 }
