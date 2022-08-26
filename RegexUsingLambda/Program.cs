@@ -44,6 +44,11 @@
             Console.WriteLine("Enter Password");
             string Password_4 = Console.ReadLine();
             userRegistration.validPasswordR3(Password_4);
+
+            //UC9
+            Console.WriteLine("Enter Password");
+            string CheckEmail = Console.ReadLine();
+            userRegistration.validCheckEmailSample(CheckEmail);
         }
 
 

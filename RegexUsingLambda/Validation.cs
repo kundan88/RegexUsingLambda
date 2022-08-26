@@ -17,6 +17,7 @@ namespace RegexUsingLambda
         public Regex PasswordR2 = new Regex("^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
         public Regex PasswordR3 = new Regex("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
         public Regex PasswordR4 = new Regex("^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9]{8,}$");
+        public Regex CheckEmailR = new Regex("^[a-z]{3,}(([.|+]{1})?([-]{1})?[0-9]{1,})?@[a-z0-9]{1,}.[a-z]{3}(.[a-z]{2,4})?$");
 
 
         public string ValidFirstName(string FirstName)
@@ -153,6 +154,22 @@ namespace RegexUsingLambda
                     Console.WriteLine("Password is valid");
                 }
                return Password_4;
+        }
+        public string validCheckEmailSample(string CheckEmail)
+        {
+            bool CheckEmailPattern(string CheckEmailPattern) => CheckEmailR.IsMatch(CheckEmail);
+            bool result = CheckEmailPattern(CheckEmail);
+            
+                if (result == false)
+                {
+                Console.WriteLine("Email is Invalid");
+                }
+                           
+                else
+                {
+                  Console.WriteLine("Email is valid");
+                }
+                return CheckEmail;
         }
     }
 }
