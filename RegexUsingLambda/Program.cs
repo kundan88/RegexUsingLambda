@@ -29,6 +29,12 @@
             Console.WriteLine("Enter Password");
             string Password = Console.ReadLine();
             userRegistration.validPassword(Password);
+
+            //UC6
+            Console.WriteLine("Enter Password");
+            string Password_1 = Console.ReadLine();
+            userRegistration.validPasswordR2(Password_1);
         }
+
     }
 }

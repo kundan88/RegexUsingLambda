@@ -14,6 +14,7 @@ namespace RegexUsingLambda
         public Regex EmailR = new Regex("^[A-Za-z]{3,}@[a-z]{3,}.[a-z]{3,}$");
         public Regex MobileNoR = new Regex("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$");
         public Regex PasswordR = new Regex("^[a-zA-Z0-9]{8,}$");
+        public Regex PasswordR2 = new Regex("^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
 
         public string ValidFirstName(string FirstName)
         {
@@ -99,7 +100,25 @@ namespace RegexUsingLambda
                 {
                 Console.WriteLine("Password is valid");
                 }
-            return Password;
+               return Password;
         }
+        public string validPasswordR2(string Password2)
+        {
+            bool PasswordR2Pattern(string PasswordR2Pattern) => PasswordR.IsMatch(Password2);
+            bool result = PasswordR2Pattern(Password2);
+            
+                if (result == false)
+                {
+                    Console.WriteLine("Password is Invalid");
+                }
+                else
+                {
+                    Console.WriteLine("Password is valid");
+                }
+                return Password2;
+
+
+            
+        } 
     }
 }
