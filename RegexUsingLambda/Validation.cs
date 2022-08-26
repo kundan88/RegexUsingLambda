@@ -11,6 +11,7 @@ namespace RegexUsingLambda
     {
         public Regex FirstNameR = new Regex("^[A-Z]{1}[a-zA-Z]{2,}$");
         public Regex LastNameR = new Regex("^[A-Z]{1}[a-zA-Z]{2,}$");
+        public Regex EmailR = new Regex("^[A-Za-z]{3,}@[a-z]{3,}.[a-z]{3,}$");
         public string ValidFirstName(string FirstName)
         {
             bool FirstNamePattern(string FirstNamePattern) => FirstNameR.IsMatch(FirstName);
@@ -27,7 +28,7 @@ namespace RegexUsingLambda
             {
                 Console.WriteLine("First Name is valid");
             }
-            return "FirstName;
+            return FirstName;
         }
 
         public string validLastName(string LastName)
@@ -45,6 +46,23 @@ namespace RegexUsingLambda
                  Console.WriteLine("Last Name is valid");
                 }
                  return LastName;
+        }
+
+        public string validEmail(string Email)
+        {
+            bool EmailPattern(string EmailPattern) => EmailR.IsMatch(Email);
+            bool result = EmailPattern(Email);
+            
+                if (result == false)
+                {
+                    Console.WriteLine("EmailId is Invalid");
+                }
+                
+                else
+                {
+                Console.WriteLine("EmailId is valid");
+                }
+                return Email;
         }
     }
 }
