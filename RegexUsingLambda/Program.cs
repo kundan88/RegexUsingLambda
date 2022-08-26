@@ -19,6 +19,11 @@
             Console.WriteLine("Enter Email");
             string Email = Console.ReadLine();
             userRegistration.validEmail(Email);
+
+            //UC4
+            Console.WriteLine("Enter Mobile Number");
+            string MobileNo = Console.ReadLine();
+            userRegistration.validMobileNo(MobileNo);
         }
     }
 }

@@ -12,6 +12,8 @@ namespace RegexUsingLambda
         public Regex FirstNameR = new Regex("^[A-Z]{1}[a-zA-Z]{2,}$");
         public Regex LastNameR = new Regex("^[A-Z]{1}[a-zA-Z]{2,}$");
         public Regex EmailR = new Regex("^[A-Za-z]{3,}@[a-z]{3,}.[a-z]{3,}$");
+        public Regex MobileNoR = new Regex("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$");
+
         public string ValidFirstName(string FirstName)
         {
             bool FirstNamePattern(string FirstNamePattern) => FirstNameR.IsMatch(FirstName);
@@ -45,7 +47,7 @@ namespace RegexUsingLambda
                 {
                  Console.WriteLine("Last Name is valid");
                 }
-                 return LastName;
+               return LastName;
         }
 
         public string validEmail(string Email)
@@ -62,7 +64,23 @@ namespace RegexUsingLambda
                 {
                 Console.WriteLine("EmailId is valid");
                 }
-                return Email;
+               return Email;
+        }
+
+        public string validMobileNo(string MobileNo)
+        {
+            bool MobileNoPattern(string MobileNoPattern) => MobileNoR.IsMatch(MobileNo);
+            bool result = MobileNoPattern(MobileNo);
+            
+                if (result == false)
+                {
+                Console.WriteLine("Mobile Number is not Valid");
+                }
+               else            
+               {
+                Console.WriteLine("Mobile Number is Valid");
+            }
+            return MobileNo;
         }
     }
 }
