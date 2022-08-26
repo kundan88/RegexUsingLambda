@@ -24,6 +24,11 @@
             Console.WriteLine("Enter Mobile Number");
             string MobileNo = Console.ReadLine();
             userRegistration.validMobileNo(MobileNo);
+
+            //UC5
+            Console.WriteLine("Enter Password");
+            string Password = Console.ReadLine();
+            userRegistration.validPassword(Password);
         }
     }
 }
